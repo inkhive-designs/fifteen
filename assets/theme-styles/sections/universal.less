@@ -2,9 +2,9 @@ body {
 	.body-font;
 	background: @background;
 	word-wrap: break-word;
+	color:@content;
 }
 .mega-container {
-	background: darken(@background,2%);
 	max-width: 1170px;
 	margin: auto;
 	margin-top: -100px;
@@ -12,43 +12,43 @@ body {
 	clear: both;
 	position: relative;
 	z-index: 0;
-	
-}
-a {
-	color: @accent;
-	cursor: pointer;
-	&:hover {
-		text-decoration: none;
-		color: @accent;
-	}
-}
-.container {
-	margin: auto;
-}
-.panel {
-	background: none;
-}
+    }
+    a {
+        color: @accent;
+        cursor: pointer;
+        &:hover {
+            text-decoration: none;
+            color: @accent;
+        }
+    }
+    .container {
+        margin: auto;
+    }
+    .panel {
+        background: none;
+    }
 
-::selection {
-	background: @accent;
-	color: @onaccent;
-}
+    ::selection {
+        background: @accent;
+        color: @onaccent;
+    }
 
-#main {
-	overflow: visible; //May break masonry layouts
-	clear: both;
-}
+    #main {
+        overflow: visible; //May break masonry layouts
+        clear: both;
+    }
 
-#content {
-	margin-top: 50px;
-	overflow: visible;
-	padding-top: 20px;
-}
+    #content {
+        margin-top: 50px;
+        overflow: visible;
+        padding-top: 20px;
+        background: darken(@background,2%);
+    }
 
-#primary {
-	overflow: visible;
-}
-/* section titles */	
+    #primary {
+        overflow: visible;
+    }
+    /* section titles */
 .section-title {
 	color: darken(@content,18%);
 	font-weight: bold;

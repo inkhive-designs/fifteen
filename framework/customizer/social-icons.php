@@ -6,6 +6,37 @@ function fifteen_customize_register_social( $wp_customize ) {
 			'priority' => 44 ,
 			'panel' => 'fifteen_header_panel'
 	));
+
+    //social icons style
+    $social_style = array(
+        'style-default'  => __('Default', 'fifteen'),
+        'hvr-ripple-out'  => __('Style 1', 'fifteen'),
+        'hvr-wobble-bottom'   => __('Style 2', 'fifteen'),
+        'hvr-glow'   => __('Style 3', 'fifteen'),
+
+    );
+    $wp_customize->add_setting(
+        'fifteen_social_icon_style_set', array(
+        'sanitize_callback' => 'fifteen_sanitize_social_style',
+        'default' => 'hvr-bounce-to-bottom'
+    ));
+
+    function fifteen_sanitize_social_style( $input ) {
+        if ( in_array($input, array('style-default','hvr-wobble-bottom','hvr-ripple-out','hvr-glow') ) )
+            return $input;
+        else
+            return '';
+    }
+
+    $wp_customize->add_control( 'fifteen_social_icon_style_set', array(
+        'settings' => 'fifteen_social_icon_style_set',
+        'label' => __('Social Icon Style ','fifteen'),
+        'description' => __('You can choose your icon style','fifteen'),
+        'section' => 'fifteen_social_section',
+        'type' => 'select',
+        'choices' => $social_style,
+    ));
+	
 	
 	$social_networks = array( //Redefinied in Sanitization Function.
 					'none' => __('-','fifteen'),

@@ -27,10 +27,16 @@ get_template_part('modules/header/head'); ?>
 			 rt_slider::render('slider', 'nivo' ); 
 		} ?>
 
-	<?php get_template_part('featured', 'posts' ); ?>
+	<?php// get_template_part('featured', 'posts' ); ?>
+
 	
 	<?php do_action('fifteen-after-header'); ?>
-	
+
 	<div class="mega-container">
-	
+        <?php get_template_part('framework/featured-components/post','celsius'); ?>
+        <?php get_template_part('framework/featured-components/post','degree'); ?>
+
+
 		<div id="content" class="site-content container">
+
+            <header class="entry-header">

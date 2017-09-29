@@ -19,8 +19,10 @@ function fifteen_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css' );
 	
 	wp_enqueue_style( 'hover-style', get_template_directory_uri() . '/assets/css/hover.min.css' );
-	
-	wp_enqueue_style( '-main-theme-style', get_template_directory_uri() . '/assets/theme-styles/css/default.css' );
+
+    wp_enqueue_style( 'animate-style', get_template_directory_uri() . '/assets/css/animate.css' );
+
+    wp_enqueue_style( 'fifteen-main-theme-style', get_template_directory_uri() . '/assets/theme-styles/css/'.get_theme_mod('fifteen_skin', 'default').'.css' );
 	
 	wp_enqueue_script( '-external', get_template_directory_uri() . '/assets/js/external.js', array('jquery'), '20120206', true );
 

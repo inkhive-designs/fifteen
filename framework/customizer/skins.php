@@ -10,15 +10,57 @@ function fifteen_customize_register_skins( $wp_customize ) {
 	    'default'     => '#000',
 	    'sanitize_callback' => 'sanitize_hex_color',
 	));
-	
-	$wp_customize->add_control(new WP_Customize_Color_Control( 
-		$wp_customize, 
+
+	$wp_customize->add_control(new WP_Customize_Color_Control(
+		$wp_customize,
 		'fifteen_header_desccolor', array(
 			'label' => __('Site Tagline Color','fifteen'),
 			'section' => 'colors',
 			'settings' => 'fifteen_header_desccolor',
 			'type' => 'color'
-		) ) 
+		) )
 	);
+
+//Select the Default Theme Skin
+        $wp_customize->add_section(
+            'fifteen_skin_options',
+            array(
+                'title'     => __('Choose Skin','fifteen'),
+                'priority'  => 39,
+                'panel'    => 'fifteen_design_panel'
+                )
+        );
+
+        $wp_customize->add_setting(
+            'fifteen_skin',
+            array(
+                'default'=> 'default',
+                'sanitize_callback' => 'fifteen_sanitize_skin'
+            )
+        );
+
+        $skins = array( 'default' => __('Default(Gray)','fifteen'),
+            'orange' =>  __('Dark Orange','fifteen'),
+            'green' => __('Green','fifteen'),
+            'slick' => __('Slick','fifteen'),
+
+        );
+
+        $wp_customize->add_control(
+            'fifteen_skin',array(
+                'settings' => 'fifteen_skin',
+                'section'  => 'fifteen_skin_options',
+                'type' => 'select',
+                'choices' => $skins,
+            )
+        );
+
+        function fifteen_sanitize_skin( $input ) {
+            if ( in_array($input, array('default','orange','slick','green') ) )
+                return $input;
+            else
+                return '';
+        }
+
 }
 add_action( 'customize_register', 'fifteen_customize_register_skins' );

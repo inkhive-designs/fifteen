@@ -70,6 +70,46 @@ function fifteen_custom_css_mods() {
 		$val = esc_html(get_theme_mod('fifteen_logo_resize'))/100;
 		$custom_css .= "#masthead #site-logo img { transform: scale(".$val."); -webkit-transform: scale(".$val."); -moz-transform: scale(".$val."); -ms-transform: scale(".$val."); }";
 		endif;
+		/////// page & post fontsize
+    if(get_theme_mod('fifteen_content_page_post_fontsize_set')):
+        $val = get_theme_mod('fifteen_content_page_post_fontsize_set');
+        if($val=='small'):
+            $custom_css .= "#primary-mono .entry-content{ font-size:14px;}";
+        elseif ($val=='medium'):
+            $custom_css .= "#primary-mono .entry-content{ font-size:18px;}";
+        elseif ($val=='large'):
+            $custom_css .= "#primary-mono .entry-content{ font-size:20px;}";
+        elseif ($val=='extra-large'):
+            $custom_css .= "#primary-mono .entry-content{ font-size:22px;}";
+        endif;
+    else:
+        $custom_css .= "#primary-mono .entry-content{ font-size:16px;}";
+    endif;
+
+    //site title font size
+    //var_dump(get_theme_mod('fifteen_content_site_fontsize_set'));
+    if(get_theme_mod('fifteen_content_site_title_fontsize_set')):
+        $val=get_theme_mod('fifteen_content_site_title_fontsize_set');
+        if($val != 'default'):
+            $custom_css .= ".site-branding h1.site-title {font-size:".$val."px !important;}";
+        else:
+            $custom_css .= ".site-branding h1.site-title {font-size:42"."px;}";
+        endif;
+    endif;
+
+    //site desc font size
+    //var_dump(get_theme_mod('fifteen_content_site_desc_fontsize_set'));
+    if(get_theme_mod('fifteen_content_site_desc_fontsize_set')):
+        $val=get_theme_mod('fifteen_content_site_desc_fontsize_set');
+        if($val != 'default'):
+            $custom_css .= ".site-branding h2.site-description {font-size:".$val."px !important;}";
+        else:
+            $custom_css .= ".site-branding h2.site-description {font-size:18"."px;}";
+        endif;
+    endif;
+		
+		
+		
 
 	wp_add_inline_style( '-main-theme-style', wp_strip_all_tags($custom_css) );
 	

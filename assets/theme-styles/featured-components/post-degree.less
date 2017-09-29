@@ -70,6 +70,8 @@
     .transform(translateY(-400%));
     @media screen and (max-width: 767px) {
       .transform(translateY(0%));
+      top: 0;
+      margin-top: 0px;
     }
     .transition(1.3s all ease);
   }
@@ -102,24 +104,14 @@
       }
       h2 {
         .transform(translateY(0%));
-        background: @accent;
+       // background: @accent;
         font-size: 13px;
+        background-color: rgba(0, 0, 0, 0.7);
       }
-      @media screen and (max-width: 767px) {
-        h2 {
-          &:hover{
-            .transform(translateY(0%));
-            opacity: 0;
-          }
-        }
-      }
+
       p.description {
         opacity: 1;
         .transform(translateY(0%));
-      }
-      @media screen and (max-width: 767px) {
-        .transform(translateY(0%));
-        opacity: 1;
       }
       .featured-thumb{
         position: relative;

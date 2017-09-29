@@ -16,6 +16,7 @@
                 setup_postdata( $post ); ?>
 
                 <div class="degree-wrapper col-md-4 col-sm-4">
+                    <a href="<?php the_permalink() ?>">
                     <div class="featured-thumb">
                         <?php if (has_post_thumbnail()) : ?>
                             <a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('fifteen-thumb'); ?></a>
@@ -28,8 +29,8 @@
                         </p>
 
                         <h2><?php the_title(); ?></h2>
-
                     </div>
+                    </a>
                 </div>
 
 

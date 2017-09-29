@@ -12,6 +12,7 @@ jQuery(document).ready( function() {
 	        jQuery('#jumbosearch').fadeOut();
 	    }
 	});
+
 	
 	//masonry
 /*

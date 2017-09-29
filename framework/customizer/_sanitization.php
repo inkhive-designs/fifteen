@@ -4,7 +4,7 @@
 	    if ( $input == 1 ) {
 	        return 1;
 	    } else {
-	        return 'fifteen';
+	        return '';
 	    }
 	}
 	
@@ -12,12 +12,12 @@
 		if ( ($input >= 0) && is_numeric($input) )
 			return $input;
 		else
-			return 'fifteen';	
+			return '';
 	}
 	
 	function fifteen_sanitize_category( $input ) {
 		if ( term_exists(get_cat_name( $input ), 'category') )
 			return $input;
 		else 
-			return 'fifteen';	
+			return '';
 	}

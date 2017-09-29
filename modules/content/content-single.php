@@ -3,14 +3,11 @@
  * @package hanne
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title title-font">', '</h1>' ); ?>
-		
-		
-		<div class="entry-meta">
+    <header class="entry-header">
+<!--        --><?php //the_title( '<h1 class="entry-title title-font">', '</h1>' ); ?>
+    <div class="entry-meta">
 			<?php fifteen_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->

@@ -29,13 +29,26 @@
 		img {
 			.transition(0.4s all ease);
 		}
+        a:hover{
+        }
+		a:hover:after{
+				content: '\f062';
+				font-family: FontAwesome;
+				position: absolute;
+				top: 46%;
+				left: 46%;
+				right: 0;
+				bottom: 0;
+				font-size: 24px;
+				color: fade(@onaccent,70%);
+                .transition(0.4s all ease);
+		}
 		&:hover {
 			img {
 				.transition(0.4s all ease);
 				-moz-filter: brightness(0.9);
 				-webkit-filter: brightness(0.9);
 				filter: brightness(0.9);
-				
 			}
 		}
 	}

@@ -19,7 +19,8 @@ add_action( 'customize_register', 'fifteen_customize_register' );
 //Load All Individual Settings Based on Sections/Panels.
 require_once get_template_directory().'/framework/customizer/_customizer_controls.php';
 require_once get_template_directory().'/framework/customizer/_googlefonts.php';
-require_once get_template_directory().'/framework/customizer/_featured-posts.php';
+require_once get_template_directory().'/framework/customizer/post_celsius.php';
+require_once get_template_directory().'/framework/customizer/post_degree.php';
 require_once get_template_directory().'/framework/customizer/_layouts.php';
 require_once get_template_directory().'/framework/customizer/_sanitization.php';
 require_once get_template_directory().'/framework/customizer/header.php';
