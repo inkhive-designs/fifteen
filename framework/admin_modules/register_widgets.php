@@ -12,7 +12,7 @@ function fifteen_widgets_init() {
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title title-font">',
-		'after_title'   => '</h3>',
+		'after_title'   => '</h3><style> .search-field {margin-top: 20px;} #search-2 h3.widget-title{margin: 0px;}</style>',
 	) );
 	
 	register_sidebar( array(

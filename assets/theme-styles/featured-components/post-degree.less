@@ -1,6 +1,6 @@
 #featured-degree{
   @media screen and (max-width: 767px) {
-    pointer-events: none;
+    //pointer-events: none;
   }
   border-bottom: none;
   cursor: pointer;
@@ -16,7 +16,7 @@
   }
   @media screen and (max-width: 981px) {
     .section-title{
-      font-size: 20px;
+      font-size: 18px;
     }
     .entry-date, .published{
       display: none;
@@ -40,20 +40,23 @@
         right: 0;
         left: 0;
         background-color: rgba(0, 0, 0, 0.5);
+        @media screen and (max-width: 981px) {
+          display: none;
+        }
       }
     }
 
   }
 
   h3{
-    text-align: center;
-    font-size: 24px;
-    color: @background;
-    position: absolute;
+   position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px 10px;
+    top:50%;
+    font-weight: 900;
+    font-size: 15px;
+    transform: translateY(-50%);
     .posted-on a{
       color: @background;
     }
@@ -64,17 +67,19 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px 10px;
-    margin-bottom: 0;
-    font-weight: 300;
-    font-size: 15px;
+    top:50%;
+    font-weight: 500;
+    font-size: 18px;
+    transform: translateY(-50%);
     text-transform: uppercase;
     color: @onaccent;
-    .transform(translateY(-400%));
-    @media screen and (max-width: 767px) {
-      .transform(translateY(0%));
-      top: 0;
-      margin-top: 0px;
+    text-align: center;
+    //.transform(translateY(-400%));
+    @media screen and (max-width: 991px) {
+      transform: none;
+      font-size: 15px;
+      //top: 0;
+    //  margin-top: 0px;
     }
     .transition(1.3s all ease);
   }
@@ -102,14 +107,22 @@
     overflow: hidden;
     margin-top: 25px;
     &:hover {
+      @media screen and (max-width: 991px) {
+        transform: none !important;
+      }
       h3{
         display: none;
       }
       h2 {
-        .transform(translateY(0%));
-       // background: @accent;
-        font-size: 13px;
+        font-size: 15px;
         background-color: rgba(0, 0, 0, 0.7);
+        top: 50%;
+        transform: translateY(50%);
+        padding: 30px 0px;
+        @media screen and (max-width: 991px) {
+          transform: none;
+          padding: 0px;
+        }
       }
 
       p.description {
