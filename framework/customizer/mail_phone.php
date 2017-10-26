@@ -15,7 +15,7 @@ function fifteen_customize_register_header_mail( $wp_customize ) {
 		'label' => __('Your Email','fifteen'),
 		'section' => 'fifteen_mail',
 		'settings' => 'fifteen_mailid',
-		'type' => 'text',
+		'type' => 'email',
 	) );
 	
 	$wp_customize->add_setting( 'fifteen_phone' , array(
@@ -27,7 +27,7 @@ function fifteen_customize_register_header_mail( $wp_customize ) {
 		'label' => __('Your Phone No.','fifteen'),
 		'section' => 'fifteen_mail',
 		'settings' => 'fifteen_phone',
-		'type' => 'text',
+		'type' => 'tel',
 	) );
 	
 }

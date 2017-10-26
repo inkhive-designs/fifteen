@@ -6,7 +6,7 @@
             if(get_theme_mod('fifteen_celsius_title')):?>
                 <div class="section-title">
                     <?php
-                    echo get_theme_mod('fifteen_celsius_title');
+                    echo esc_html(get_theme_mod('fifteen_celsius_title'));
                     ?>
                 </div>
             <?php endif;?>
@@ -23,7 +23,7 @@
                             <?php if (has_post_thumbnail()) : ?>
                                 <div title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('coller-pop-thumb'); ?></div>
                             <?php else : ?>
-                                <div title="<?php the_title_attribute() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></div>
+                                <div title="<?php the_title_attribute() ?>"><img src="<?php echo esc_html(get_template_directory_uri()."/assets/images/placeholder2.jpg"); ?>"></div>
                             <?php endif; ?>
                         </div>
                         <!-- mobile screen title-->

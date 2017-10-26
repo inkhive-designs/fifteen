@@ -1,5 +1,10 @@
 /* -------- Nav Menu ---------- */
 #site-navigation {
+	@media screen and (max-width: 991px) {
+		.menu select#mobileMenu_mm1 {
+			background-color: rgba(0, 0, 0, 0.5) !important;
+		}
+	}
 	float: none;
 	width: auto;
 	clear: none;
@@ -9,7 +14,9 @@
 	margin-bottom: 80px;
 	position: relative;
 	z-index: 9999;
-	@media screen and (max-width: 991px) { width: 100%; margin-top: 0; }
+	@media screen and (max-width: 991px) {
+		width: 100%;
+		 }
 	.body-font;
 	.nav-container {
 		padding: 0px;
@@ -25,7 +32,6 @@
 			}
 			a {
 				padding: 38px 15px;
-				@media screen and (max-width: 991px) {  }
 				color: @header-color;
 				text-transform: uppercase;
 				font-weight: normal;
@@ -35,6 +41,9 @@
 				.transition( 0.4s all ease );
 				position: relative;
 				transform: scale(1.01);
+				@media screen and (max-width: 991px) {
+					padding: 20px 15px;
+				}
 
 			}
 			&:hover {
@@ -63,6 +72,9 @@
 				box-shadow: 0px 0px 2px fade(black, 20%);
 				border-radius: 5px;
 				top: ~"calc(100% - 22px)";
+				@media screen and (max-width: 991px) {
+					top: ~"calc(100% - 11px)";
+				}
 				display: block;
 				.transition( 0.2s all ease );
 				perspective: 1000;
@@ -170,7 +182,7 @@
 		float: none;
 		text-align: center;
 		width: 100%;
-		display: none;
+		//display: none;
 		.td_mobile_menu_wrap {
 			min-height: 42px;
 			padding: 20px;
@@ -205,16 +217,11 @@
 	}
 }
 
-//Mobile Menu
-@media screen and (min-width: 768px) {
-	#mobile-menu {
-		//display: none;
-	}
-}
 
 #mobile-menu {
 	text-align: center;
-	background: darken(@background, 6%);
+	//background: darken(@background, 6%);
+	//background: darken(@background, 6%);
 	padding: 10px;
 	margin: 20px auto;
 }

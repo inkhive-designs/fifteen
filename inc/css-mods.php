@@ -70,7 +70,8 @@ function fifteen_custom_css_mods() {
 		$val = esc_html(get_theme_mod('fifteen_logo_resize'))/100;
 		$custom_css .= "#masthead #site-logo img { transform: scale(".$val."); -webkit-transform: scale(".$val."); -moz-transform: scale(".$val."); -ms-transform: scale(".$val."); }";
 		endif;
-		/////// page & post fontsize
+
+    // page & post fontsize
     if(get_theme_mod('fifteen_content_page_post_fontsize_set')):
         $val = get_theme_mod('fifteen_content_page_post_fontsize_set');
         if($val=='small'):
@@ -91,9 +92,9 @@ function fifteen_custom_css_mods() {
     if(get_theme_mod('fifteen_content_site_title_fontsize_set')):
         $val=get_theme_mod('fifteen_content_site_title_fontsize_set');
         if($val != 'default'):
-            $custom_css .= ".site-branding h1.site-title {font-size:".$val."px !important;}";
+            $custom_css .= "#masthead h1.site-title {font-size:".$val."px !important;}";
         else:
-            $custom_css .= ".site-branding h1.site-title {font-size:42"."px;}";
+            $custom_css .= "#masthead h1.site-title {font-size:42"."px;}";
         endif;
     endif;
 
@@ -102,16 +103,16 @@ function fifteen_custom_css_mods() {
     if(get_theme_mod('fifteen_content_site_desc_fontsize_set')):
         $val=get_theme_mod('fifteen_content_site_desc_fontsize_set');
         if($val != 'default'):
-            $custom_css .= ".site-branding h2.site-description {font-size:".$val."px !important;}";
+            $custom_css .= "#masthead h2.site-description {font-size:".$val."px !important;}";
         else:
-            $custom_css .= ".site-branding h2.site-description {font-size:18"."px;}";
+            $custom_css .= "#masthead h2.site-description {font-size:18"."px;}";
         endif;
     endif;
 		
 		
 		
 
-	wp_add_inline_style( '-main-theme-style', wp_strip_all_tags($custom_css) );
+	wp_add_inline_style( 'fifteen-main-theme-style', wp_strip_all_tags($custom_css) );
 	
 }
 

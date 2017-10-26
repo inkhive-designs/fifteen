@@ -41,8 +41,9 @@ function fifteen_customize_register_skins( $wp_customize ) {
 
         $skins = array( 'default' => __('Default(Gray)','fifteen'),
             'orange' =>  __('Dark Orange','fifteen'),
-            'green' => __('Green','fifteen'),
+            'pink' => __('Pink','fifteen'),
             'slick' => __('Slick','fifteen'),
+            'custom' => __('BUILD CUSTOM SKIN','fifteen'),
 
         );
 
@@ -56,11 +57,85 @@ function fifteen_customize_register_skins( $wp_customize ) {
         );
 
         function fifteen_sanitize_skin( $input ) {
-            if ( in_array($input, array('default','orange','slick','green') ) )
+            if ( in_array($input, array('default','orange','slick','pink','custom') ) )
                 return $input;
             else
                 return '';
         }
+
+    //CUSTOM SKIN BUILDER
+
+    $wp_customize->add_setting('fifteen_skin_var_background', array(
+        'default'     => '#9c9c9c',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'fifteen_skin_var_background', array(
+            'label' => __('Primary Background','fifteen'),
+            'section' => 'colors',
+            'settings' => 'fifteen_skin_var_background',
+            'active_callback' => 'fifteen_skin_custom',
+            'type' => 'color'
+        ) )
+    );
+
+
+    $wp_customize->add_setting('fifteen_skin_var_accent', array(
+        'default'     => 'darkgreen',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'fifteen_skin_var_accent', array(
+            'label' => __('Primary Accent','fifteen'),
+            'section' => 'colors',
+            'settings' => 'fifteen_skin_var_accent',
+            'type' => 'color',
+            'active_callback' => 'fifteen_skin_custom',
+        ) )
+    );
+
+    $wp_customize->add_setting('fifteen_skin_var_onaccent', array(
+        'default'     => '#fff',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'fifteen_skin_var_onaccent', array(
+            'label' => __('Primary Onaccent','fifteen'),
+            'section' => 'colors',
+            'settings' => 'fifteen_skin_var_onaccent',
+            'type' => 'color',
+            'active_callback' => 'fifteen_skin_custom',
+        ) )
+    );
+
+    $wp_customize->add_setting('fifteen_skin_var_content', array(
+        'default'     => '#222',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'fifteen_skin_var_content', array(
+            'label' => __('Content Color','fifteen'),
+            'description' => __('Must be Dark, like Black or Dark grey. Any darker color is acceptable.','fifteen'),
+            'section' => 'colors',
+            'settings' => 'fifteen_skin_var_content',
+            'active_callback' => 'fifteen_skin_custom',
+            'type' => 'color'
+        ) )
+    );
+
+    function fifteen_skin_custom( $control ) {
+        $option = $control->manager->get_setting('fifteen_skin');
+        return $option->value() == 'custom' ;
+    }
+
 
 }
 add_action( 'customize_register', 'fifteen_customize_register_skins' );

@@ -40,6 +40,7 @@ function fifteen_customize_register_layouts( $wp_customize ) {
 						'grid' => __('Basic Blog Layout','fifteen'),
 						'grid_2_column' => __('Grid - 2 Column','fifteen'),
 						'grid_3_column' => __('Grid - 3 Column','fifteen'),
+
 						
 					)
 			)
