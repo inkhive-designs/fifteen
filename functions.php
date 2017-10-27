@@ -29,11 +29,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/framework/customizer/init.php';
 
 /**
- * Load Designer
- */
-require get_template_directory() . '/framework/designer/designer.php';
-
-/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
