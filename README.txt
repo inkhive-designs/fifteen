@@ -95,11 +95,7 @@ All the Images used in the Screenshot are Public Domain.
 https://creativecommons.org/publicdomain/zero/1.0/
 
 List of Images
-	- https://pixabay.com/en/fruits-863072/
-	- https://pixabay.com/en/sculpture-1392529/
-	- https://pixabay.com/en/kid-1365105/
-	- https://pixabay.com/en/tulips-1477285/
-	- https://pixabay.com/en/ladybug-1480102/
-	- https://pixabay.com/en/heart-1450302/ 
-
-		
+	- https://pexels.com/photo/lake-animals-dogs-pets-4933/
+	- https://pexels.com/photo/bonding-cold-cozy-dog-374845/
+	- https://pexels.com/photo/high-angle-view-of-shoes-322207/
+	- https://pexels.com/photo/art-astronomy-atmosphere-aurora-borealis-360912/
