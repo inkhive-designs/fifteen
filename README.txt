@@ -1,13 +1,13 @@
-Hanne WordPress Theme
+Fifteen WordPress Theme
 GNU GPL v3 (http://www.gnu.org/licenses/gpl.html)
 Copyrights 2015. Inkhive.
 http://inkhive.com/product/fifteen/
 
 
-Hanne
+Fifteen
 =========
 
-Hanne is a very simple, high performance theme with great customization options. You can enable multiple areas to showcase your featured content. Its lightweight nature makes it very fast loading in all browsers. It comes pre-integrated with RT Slider and has a Beautiful Footer Widgets area. Check it out for more.
+Fifteen is a very simple, high performance theme with great customization options. You can enable multiple areas to showcase your featured content. Its lightweight nature makes it very fast loading in all browsers. It comes pre-integrated with RT Slider and has a Beautiful Footer Widgets area. Check it out for more.
 
 Getting Started
 ---------------
@@ -15,7 +15,7 @@ Getting Started
 How to Install the Theme?
 
 1. Go to WP Admin > Appearance > Themes > Add New.
-2. Search for "Hanne".
+2. Search for "Fifteen".
 3. Click on Install and Activate.
 
 Alternatively,
@@ -36,7 +36,7 @@ This theme is built using Customizer. So to Configure theme settings like Featur
 Report Bugs / Theme Support
 ---------------------------
 
-Hanne is a relatively new theme, and could contain some hidden bugs. So, if you find any please report them at the following URL:
+Fifteen is a relatively new theme, and could contain some hidden bugs. So, if you find any please report them at the following URL:
 
 http://inkhive.com/contact-us/
 

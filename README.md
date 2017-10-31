@@ -1,5 +1,10 @@
 # fifteen
 
+Fifteen 2.1.2
+
+    License Updated
+    Bugs Fixed
+
 Fifteen 2.1.1
     
     Screenshot Updated
