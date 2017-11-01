@@ -1,4 +1,7 @@
 # fifteen
+Fifteen 2.1.3
+    
+    Featured Area 2 bug fixed
 
 Fifteen 2.1.2
 
