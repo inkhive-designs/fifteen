@@ -1,4 +1,9 @@
 # fifteen
+Fifteen 2.1.4
+
+    Page header title bug fixed.
+    Category link bug fixed on mobile screen.
+    
 Fifteen 2.1.3
     
     Featured Area 2 bug fixed

@@ -69,7 +69,12 @@
 			border: solid 1px fade(@content, 80%);
 			border-radius: 4px;
 			margin-right: 8px;
-			
+			@media screen and (max-width:767px) {
+				padding: 4px 4px;
+				font-size: 10px;
+				margin-right: 2px;
+				display: inline-block;
+			}
 		}
 	}
 	#featured-image {
