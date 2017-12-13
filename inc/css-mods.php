@@ -54,7 +54,7 @@ function fifteen_custom_css_mods() {
 	
 	
 	if ( get_theme_mod('fifteen_header_desccolor') ) :
-		$custom_css .= "#masthead h2.site-description { color: ".esc_html(get_theme_mod('fifteen_header_desccolor','#777'))."; }";
+		$custom_css .= "#masthead h2.site-description { color: ".esc_html(get_theme_mod('fifteen_header_desccolor','#ffffff'))."; }";
 	endif;
 	
 	

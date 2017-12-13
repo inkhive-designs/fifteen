@@ -1,4 +1,11 @@
 # fifteen
+
+Fifteen 2.1.5
+
+    Category & Tags Overlapping Issue Fixed
+    Active Submenu Hover Fixed
+    Minor Bug Fixes
+
 Fifteen 2.1.4
 
     Page header title bug fixed.

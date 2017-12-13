@@ -22,6 +22,9 @@
 		padding: 0px;
 		display: block;
 	}
+	li ul li:hover > a {
+		background: @accent;
+	}
 	ul {
 		@media screen and (max-width: 991px) { text-align: center; }
 		li {
@@ -159,6 +162,8 @@
 			color: @header-color;
 			font-weight: bold;
 		}
+	}
+	ul li:hover > a {
 	}
 	.fa {
 		padding: 0 5px 0 0;
