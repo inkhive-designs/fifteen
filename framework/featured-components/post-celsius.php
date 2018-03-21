@@ -12,7 +12,7 @@
             <?php endif;?>
             <?php /* Start the Loop */ $count=0; ?>
             <?php
-            $args = array( 'posts_per_page' => 3, 'category' => get_theme_mod('fifteen_celsius_cat') );
+            $args = array( 'posts_per_page' => 3, 'category' => esc_html(get_theme_mod('fifteen_celsius_cat')) );
             $lastposts = get_posts( $args );
             foreach ( $lastposts as $post ) :
                 setup_postdata( $post ); ?>
@@ -21,9 +21,9 @@
                     <a href="<?php the_permalink() ?>">
                         <div class="front face">
                             <?php if (has_post_thumbnail()) : ?>
-                                <div title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('fifteen-pop-thumb'); ?></div>
+                                <div title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('fifteen-pop-thumb',array('alt' => trim(strip_tags( $post->post_title )))); ?></div>
                             <?php else : ?>
-                                <div title="<?php the_title_attribute() ?>"><img src="<?php echo esc_html(get_template_directory_uri()."/assets/images/placeholder2.jpg"); ?>"></div>
+                                <div title="<?php the_title_attribute() ?>"><img alt="<?php the_title() ?>" src="<?php echo esc_html(get_template_directory_uri()."/assets/images/placeholder2.jpg"); ?>"></div>
                             <?php endif; ?>
                         </div>
                         <!-- mobile screen title-->

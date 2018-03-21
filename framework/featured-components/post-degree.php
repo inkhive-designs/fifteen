@@ -10,7 +10,7 @@
 
                 <?php /* Start the Loop */ $count=0; ?>
                 <?php
-                $args = array( 'posts_per_page' => 3, 'category' => get_theme_mod('fifteen_degree_cat') );
+                $args = array( 'posts_per_page' => 3, 'category' => esc_html( get_theme_mod('fifteen_degree_cat')) );
                 $lastposts = get_posts( $args );
                 foreach ( $lastposts as $post ) :
                     setup_postdata( $post ); ?>
@@ -19,9 +19,9 @@
                         <a href="<?php the_permalink() ?>">
                             <div class="featured-thumb">
                                 <?php if (has_post_thumbnail()) : ?>
-                                    <div title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('fifteen-thumb'); ?></div>
+                                    <div title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('fifteen-thumb',array('alt' => trim(strip_tags( $post->post_title )))); ?></div>
                                 <?php else : ?>
-                                    <div title="<?php the_title_attribute() ?>"><img src="<?php echo esc_html(get_template_directory_uri()."/assets/images/placeholder2.jpg"); ?>"></div>
+                                    <div title="<?php the_title_attribute() ?>"><img alt="<?php the_title() ?>" src="<?php echo esc_html(get_template_directory_uri()."/assets/images/placeholder2.jpg"); ?>"></div>
                                 <?php endif; ?>
 
                                 <p class="description">

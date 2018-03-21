@@ -14,9 +14,9 @@
 
 	<footer id="colophon" class="site-footer title-font" role="contentinfo">
 		<div class="site-info container">
-			<?php printf( __( 'Theme Designed by %1$s.', 'fifteen' ), '<a href="'.esc_url("http://inkhive.com/").'" rel="nofollow">InkHive</a>' ); ?>
+			<?php printf( __( 'Theme Designed by %1$s.', 'fifteen' ), '<a target="blank" href="'.esc_url("http://inkhive.com/").'" rel="nofollow">InkHive</a>' ); ?>
 			<span class="sep"></span>
-			<?php echo ( get_theme_mod('fifteen_footer_text') == 'fifteen' ) ? ('&copy; '.date_i18n( __( 'Y', 'fifteen' ) ).' '.get_bloginfo('name').__('. All Rights Reserved. ','fifteen')) : esc_html(get_theme_mod('fifteen_footer_text')); ?>
+			<?php echo ( esc_html(get_theme_mod('fifteen_footer_text')) == 'fifteen' ) ? ('&copy; '.date_i18n( __( 'Y', 'fifteen' ) ).' '.get_bloginfo('name').__('. All Rights Reserved. ','fifteen')) : esc_html(get_theme_mod('fifteen_footer_text')); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	

@@ -21,9 +21,9 @@ function fifteen_load_sidebar() {
 	$load_sidebar = true;
 	if ( get_theme_mod('fifteen_disable_sidebar') ) :
 		$load_sidebar = false;
-	elseif( get_theme_mod('fifteen_disable_sidebar_home',true) && is_home() )	:
+	elseif( get_theme_mod('fifteen_disable_sidebar_home') && is_home() )	:
 		$load_sidebar = false;
-	elseif( get_theme_mod('fifteen_disable_sidebar_front',true) && is_front_page() ) :
+	elseif( get_theme_mod('fifteen_disable_sidebar_front') && is_front_page() ) :
 		$load_sidebar = false;
 	endif;
 	

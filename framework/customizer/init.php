@@ -12,7 +12,12 @@
  */
 function fifteen_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';	
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+
+    $wp_customize->remove_control('rtslider_enable_posts');
+    $wp_customize->remove_control('rtslider_enable_front');
+    $wp_customize->remove_control('rtslider_enable_pages');
+
 }
 add_action( 'customize_register', 'fifteen_customize_register' );
 

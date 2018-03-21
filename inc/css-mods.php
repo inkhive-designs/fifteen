@@ -73,7 +73,7 @@ function fifteen_custom_css_mods() {
 
     // page & post fontsize
     if(get_theme_mod('fifteen_content_page_post_fontsize_set')):
-        $val = get_theme_mod('fifteen_content_page_post_fontsize_set');
+        $val = esc_html(get_theme_mod('fifteen_content_page_post_fontsize_set'));
         if($val=='small'):
             $custom_css .= "#primary-mono .entry-content{ font-size:14px;}";
         elseif ($val=='medium'):
@@ -90,7 +90,7 @@ function fifteen_custom_css_mods() {
     //site title font size
     //var_dump(get_theme_mod('fifteen_content_site_fontsize_set'));
     if(get_theme_mod('fifteen_content_site_title_fontsize_set')):
-        $val=get_theme_mod('fifteen_content_site_title_fontsize_set');
+        $val= esc_html(get_theme_mod('fifteen_content_site_title_fontsize_set'));
         if($val != 'default'):
             $custom_css .= "#masthead h1.site-title {font-size:".$val."px !important;}";
         else:
@@ -101,7 +101,7 @@ function fifteen_custom_css_mods() {
     //site desc font size
     //var_dump(get_theme_mod('fifteen_content_site_desc_fontsize_set'));
     if(get_theme_mod('fifteen_content_site_desc_fontsize_set')):
-        $val=get_theme_mod('fifteen_content_site_desc_fontsize_set');
+        $val= esc_html(get_theme_mod('fifteen_content_site_desc_fontsize_set'));
         if($val != 'default'):
             $custom_css .= "#masthead h2.site-description {font-size:".$val."px !important;}";
         else:

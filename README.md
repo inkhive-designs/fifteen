@@ -1,4 +1,14 @@
 # fifteen
+Fifteen 2.1.6
+    
+    Site title color bug fixed.
+    Google fonts bug fixed.
+    Site logo minor bug fixed.
+    Featured Area minor bug fixed.
+    Misc scripts file modification done.
+    RT Slider bug fixed.
+    Sidebar major bug fixed.
+    Blog laout minor bug fixed.
 
 Fifteen 2.1.5
 
