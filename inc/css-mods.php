@@ -40,12 +40,12 @@ function fifteen_custom_css_mods() {
 		$custom_css .= "#social-search .searchform, #social-search .searchform:after { background: #".get_background_color()." }";
 	}
 	
-	if ( get_theme_mod('fifteen_title_font','Ovo') ) :
-		$custom_css .= ".title-font, h1, h2 { font-family: ".esc_html(get_theme_mod('fifteen_title_font'))."; }";
+	if ( get_theme_mod('fifteen_title_font','Lato') ) :
+		$custom_css .= ".title-font, h1, h2 { font-family: ".esc_html(get_theme_mod('fifteen_title_font','Lato'))."; }";
 	endif;
 	
-	if ( get_theme_mod('fifteen_body_font','Quattrocento Pro') ) :
-		$custom_css .= "body { font-family: ".esc_html(get_theme_mod('fifteen_body_font'))."; }";
+	if ( get_theme_mod('fifteen_body_font','Lato') ) :
+		$custom_css .= "body { font-family: ".esc_html(get_theme_mod('fifteen_body_font','Lato'))."; }";
 	endif;
 	
 	if ( get_header_textcolor() ) :

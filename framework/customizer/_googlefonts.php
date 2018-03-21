@@ -15,7 +15,7 @@ function fifteen_customize_register_fonts( $wp_customize ) {
 	$wp_customize->add_setting(
 		'fifteen_title_font',
 		array(
-			'default'=> 'HIND',
+			'default'=> 'Lato',
 			'sanitize_callback' => 'fifteen_sanitize_gfont' 
 			)
 	);
@@ -38,7 +38,7 @@ function fifteen_customize_register_fonts( $wp_customize ) {
 	
 	$wp_customize->add_setting(
 		'fifteen_body_font',
-			array(	'default'=> 'Open Sans',
+			array(	'default'=> 'Lato',
 					'sanitize_callback' => 'fifteen_sanitize_gfont' )
 	);
 	

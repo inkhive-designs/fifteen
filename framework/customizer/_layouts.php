@@ -2,7 +2,7 @@
 function fifteen_customize_register_layouts( $wp_customize ) {
 	// Layout and Design
 	$wp_customize->add_panel( 'fifteen_design_panel', array(
-	    'priority'       => 40,
+	    'priority'       => 3,
 	    'capability'     => 'edit_theme_options',
 	    'title'          => __('Design & Layout','fifteen'),
 	) );

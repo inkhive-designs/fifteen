@@ -1,29 +1,35 @@
 <?php
 function fifteen_customize_register_misc( $wp_customize ) {
-	$wp_customize->add_section(
-	    'fifteen_sec_upgrade',
-	    array(
-	        'title'     => __('fifteen - Help & Support','fifteen'),
-	        'priority'  => 45,
-	    )
-	);
-	
-	$wp_customize->add_setting(
-			'fifteen_upgrade',
-			array( 'sanitize_callback' => 'esc_textarea' )
-		);
-			
-	$wp_customize->add_control(
-	    new Hanne_WP_Customize_Upgrade_Control(
-	        $wp_customize,
-	        'fifteen_upgrade',
-	        array(
-	            'label' => __('Free Email Support','fifteen'),
-	            'description' => __('Currently We are Offering Free Email Support with our theme. If you have any queries or require help please <a href="https://inkhive.com/product/fifteen/">Read our FAQs</a> and if your problem is still not solved then contact us. <br><br>','fifteen'),
-	            'section' => 'fifteen_sec_upgrade',
-	            'settings' => 'fifteen_upgrade',			       
-	        )
-		)
-	);
+    $wp_customize->add_section(
+        'fifteen_sec_premsupport',
+        array(
+            'title'     => __('Fifteen - Important Links','fifteen'),
+            'priority'  => 1,
+        )
+    );
+
+    $wp_customize->add_setting(
+        'fifteen_important_links',
+        array( 'sanitize_callback' => 'fifteen_sanitize_text' )
+    );
+
+    $wp_customize->add_control(
+        new Fifteen_WP_Customize_Upgrade_Control(
+            $wp_customize,
+            'fifteen_upgrade',
+            array(
+                'settings'		=> 'fifteen_important_links',
+                'section'		=> 'fifteen_sec_premsupport',
+                'description'	=> '<a class="fifteen-important-links" href="https://inkhive.com/product/fifteen-plus" target="_blank">'.__('Purchase Fifteen Plus', 'fifteen').'</a><br/>
+                                    <a class="fifteen-important-links" href="#" target="_blank">'.__('InkHive Support Forum', 'fifteen').'</a><br/>
+                                    <a class="fifteen-important-links" href="http://demo.inkhive.com/fifteen-plus/" target="_blank">'.__('Fifteen Live Demo', 'fifteen').'</a><br/>
+                                    <a class="fifteen-important-links" href="#" target="_blank">'.__('Fifteen Documentation', 'fifteen').'</a><br/>
+                                    <a class="fifteen-important-links" href="https://www.facebook.com/inkhive/" target="_blank">'.__('We Love Our Facebook Fans', 'fifteen').'</a><br/>
+                                    <a class="fifteen-important-links" href="#" target="_blank">'.__('Want SEO?', 'fifteen').'</a><br/>
+                                    <a class="fifteen-important-links" href="#" target="_blank">'.__('Review Us', 'fifteen').'</a>'
+
+            )
+        )
+    );
 }
 add_action( 'customize_register', 'fifteen_customize_register_misc' );

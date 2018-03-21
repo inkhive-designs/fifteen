@@ -2,7 +2,7 @@
 function fifteen_customize_register_header( $wp_customize ) {
 	//Settings for Header Image
 	$wp_customize->add_panel('fifteen_header_panel', array(
-		'priority' => 20,
+		'priority' => 2,
 		'title' => __('Header Settings','fifteen')	
 	));
 	

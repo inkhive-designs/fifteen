@@ -15,17 +15,7 @@ get_template_part('modules/header/head'); ?>
 	<?php get_template_part('modules/header/jumbosearch'); ?>
 	<?php get_template_part('modules/header/top-bar'); ?>		
 	<?php get_template_part('modules/header/masthead'); ?>	
-	
-	<?php if (class_exists( 'IHSS')) : //Load these files only if the Required Plugin is Installed. ?>
-	<?php get_template_part('framework/featured-components/b-showcase' ); ?>
-	<?php get_template_part('framework/featured-components/testimonials' ); ?>
-	<?php get_template_part('framework/featured-components/parallax' ); ?>
-	<?php get_template_part('framework/featured-components/counters' ); ?>
-	<?php endif; ?>
-	
-	<?php if( class_exists('rt_slider') ) {
-			 rt_slider::render('slider', 'nivo' ); 
-		} ?>
+
 
 	<?php// get_template_part('featured', 'posts' ); ?>
 
@@ -33,6 +23,13 @@ get_template_part('modules/header/head'); ?>
 	<?php do_action('fifteen-after-header'); ?>
 
 	<div class="mega-container">
+
+        <?php if( class_exists('rt_slider') ) {
+            rt_slider::render('framework/featured-components/slider', 'nivo' );
+        } ?>
+
+
+
         <?php get_template_part('framework/featured-components/post','celsius'); ?>
         <?php get_template_part('framework/featured-components/post','degree'); ?>
 

@@ -21,7 +21,7 @@
                     <a href="<?php the_permalink() ?>">
                         <div class="front face">
                             <?php if (has_post_thumbnail()) : ?>
-                                <div title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('coller-pop-thumb'); ?></div>
+                                <div title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('fifteen-pop-thumb'); ?></div>
                             <?php else : ?>
                                 <div title="<?php the_title_attribute() ?>"><img src="<?php echo esc_html(get_template_directory_uri()."/assets/images/placeholder2.jpg"); ?>"></div>
                             <?php endif; ?>
