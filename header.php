@@ -16,9 +16,6 @@ get_template_part('modules/header/head'); ?>
 	<?php get_template_part('modules/header/top-bar'); ?>		
 	<?php get_template_part('modules/header/masthead'); ?>	
 
-
-	<?php// get_template_part('featured', 'posts' ); ?>
-
 	
 	<?php do_action('fifteen-after-header'); ?>
 
