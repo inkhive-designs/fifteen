@@ -69,7 +69,7 @@ function fifteen_setup() {
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'fifteen_custom_background_args', array(
 		'default-color' => 'ffffff',
-		'default-image' => 'fifteen',
+		'default-image' => '%s/assets/images/header.jpg',
 	) ) );
 	
 	add_image_size('fifteen-pop-thumb',542, 340, true );

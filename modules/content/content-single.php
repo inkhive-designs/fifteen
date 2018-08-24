@@ -12,9 +12,12 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<div id="featured-image">
+	<?php if ( get_theme_mod('fifteen_featured_image') == false ) { ?>
+		<div id="featured-image">
 			<?php the_post_thumbnail('full'); ?>
 	</div>
+	<?php } ?>
+	
 			
 			
 			

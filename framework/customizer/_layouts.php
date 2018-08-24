@@ -16,10 +16,30 @@ function fifteen_customize_register_layouts( $wp_customize ) {
 	    )
 	);
 	
+	$wp_customize->add_setting(
+		'fifteen_featured_image',
+		array(
+			'default'	=> true,
+			'sanitize_callback'	=> 'fifteen_sanitize_checkbox'
+		)
+	);
+	
+	$wp_customize->add_control(
+		'fifteen_featured_image',
+		array(
+			'label'	=> __('Disable Featured Image on Post pages','fifteen'),
+			'type'	=> 'checkbox',
+			'section'	=> 'fifteen_design_options',
+			'priority'	=> 5
+		)
+	);
 	
 	$wp_customize->add_setting(
 		'fifteen_blog_layout',
-		array( 'sanitize_callback' => 'fifteen_sanitize_blog_layout' )
+		array( 
+			'sanitize_callback' => 'fifteen_sanitize_blog_layout',
+			'default'	=> 'fifteen',
+		)
 	);
 	
 	function fifteen_sanitize_blog_layout( $input ) {
@@ -30,18 +50,18 @@ function fifteen_customize_register_layouts( $wp_customize ) {
 	}
 	
 	$wp_customize->add_control(
-		'fifteen_blog_layout',array(
+		'fifteen_blog_layout',
+			array(
 				'label' => __('Select Layout','fifteen'),
 				'settings' => 'fifteen_blog_layout',
 				'section'  => 'fifteen_design_options',
 				'type' => 'select',
+				'priority'	=> 10,
 				'choices' => array(
 						'fifteen' => __('Default Theme Layout','fifteen'),
 						'grid' => __('Basic Blog Layout','fifteen'),
 						'grid_2_column' => __('Grid - 2 Column','fifteen'),
 						'grid_3_column' => __('Grid - 3 Column','fifteen'),
-
-						
 					)
 			)
 	);

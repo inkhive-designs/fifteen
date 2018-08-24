@@ -38,8 +38,13 @@ require_once get_template_directory().'/framework/customizer/misc-scripts.php';
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function fifteen_customize_preview_js() {
-	if(is_customize_preview()) {
-		wp_enqueue_script( 'fifteen_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
-	}	
+		wp_enqueue_script( 'fifteen_customizer-js', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '', true );
 }
 add_action( 'customize_preview_init', 'fifteen_customize_preview_js' );
+
+
+
+function fifteen_customize_control_js() {
+		wp_enqueue_script( 'fifteen_customize_control', get_template_directory_uri() . '/assets/js/customize-control.js', array(), '', true );
+}
+add_action( 'customize_control_enqueue_scripts', 'fifteen_customize_control_js' );
