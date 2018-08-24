@@ -47,4 +47,4 @@ add_action( 'customize_preview_init', 'fifteen_customize_preview_js' );
 function fifteen_customize_control_js() {
 		wp_enqueue_script( 'fifteen_customize_control', get_template_directory_uri() . '/assets/js/customize-control.js', array(), '', true );
 }
-add_action( 'customize_control_enqueue_scripts', 'fifteen_customize_control_js' );
+add_action( 'customize_controls_enqueue_scripts', 'fifteen_customize_control_js' );

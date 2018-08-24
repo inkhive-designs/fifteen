@@ -1,5 +1,9 @@
 # Fifteen WordPress Theme
 
+Fifteen 2.1.8
+
+*	Removed an alert bug
+
 Fifteen 2.1.7
 
 *	Added Featured Image Toggle Functionality for Single Posts
