@@ -1,35 +1,34 @@
 <?php
+
 function fifteen_customize_register_misc( $wp_customize ) {
+    //Upgrade to Pro
     $wp_customize->add_section(
-        'fifteen_sec_premsupport',
+        'fifteen_sec_pro',
         array(
-            'title'     => __('Fifteen - Important Links','fifteen'),
-            'priority'  => 1,
+            'title'     => __('Important Links','fifteen'),
+            'priority'  => 0,
         )
     );
 
     $wp_customize->add_setting(
-        'fifteen_important_links',
-        array( 'sanitize_callback' => 'fifteen_sanitize_text' )
+        'fifteen_pro',
+        array( 'sanitize_callback' => 'esc_textarea' )
     );
 
     $wp_customize->add_control(
         new Fifteen_WP_Customize_Upgrade_Control(
             $wp_customize,
-            'fifteen_upgrade',
+            'fifteen_pro',
             array(
-                'settings'		=> 'fifteen_important_links',
-                'section'		=> 'fifteen_sec_premsupport',
-                'description'	=> '<a class="fifteen-important-links" href="https://inkhive.com/product/fifteen-plus" target="_blank">'.__('Purchase Fifteen Plus', 'fifteen').'</a><br/>
-                                    <a class="fifteen-important-links" href="#" target="_blank">'.__('InkHive Support Forum', 'fifteen').'</a><br/>
-                                    <a class="fifteen-important-links" href="http://demo.inkhive.com/fifteen-plus/" target="_blank">'.__('Fifteen Live Demo', 'fifteen').'</a><br/>
-                                    <a class="fifteen-important-links" href="#" target="_blank">'.__('Fifteen Documentation', 'fifteen').'</a><br/>
-                                    <a class="fifteen-important-links" href="https://www.facebook.com/inkhive/" target="_blank">'.__('We Love Our Facebook Fans', 'fifteen').'</a><br/>
-                                    <a class="fifteen-important-links" href="#" target="_blank">'.__('Want SEO?', 'fifteen').'</a><br/>
-                                    <a class="fifteen-important-links" href="#" target="_blank">'.__('Review Us', 'fifteen').'</a>'
-
+                'description'	=> '<a class="fifteen-important-links" href="https://inkhive.com/contact-us/" target="_blank">'.__('InkHive Support Forum', 'fifteen').'</a>
+                                    <a class="fifteen-important-links" href="http://demo.inkhive.com/fifteen-plus/" target="_blank">'.__('Fifteen Plus Live Demo', 'fifteen').'</a>
+                                    <a class="fifteen-important-links" href="https://www.facebook.com/inkhivethemes/" target="_blank">'.__('We Love Our Facebook Fans', 'fifteen').'</a>
+                                    <a class="fifteen-important-links" href="https://wordpress.org/support/theme/fifteen/reviews" target="_blank">'.__('Review Fifteen on WordPress', 'fifteen').'</a>
+                                    <a class="fifteen-important-links" href="https://inkhive.com/documentation/fifteen" target="_blank">'.__('Fifteen Documentation', 'fifteen').'</a>',
+                'section' => 'fifteen_sec_pro',
+                'settings' => 'fifteen_pro',
             )
         )
     );
 }
-add_action( 'customize_register', 'fifteen_customize_register_misc' );
+add_action('customize_register', 'fifteen_customize_register_misc');

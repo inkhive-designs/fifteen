@@ -45,7 +45,7 @@ $wp_customize->add_setting(
 
 
 $wp_customize->add_control(
-    new Hanne_WP_Customize_Category_Control(
+    new Fifteen_WP_Customize_Category_Control(
         $wp_customize,
         'fifteen_degree_cat',
         array(

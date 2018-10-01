@@ -1,5 +1,12 @@
 # Fifteen WordPress Theme
 
+Fifteen 2.1.9
+
+* Featured Image Thumbnail Issues Fixed 
+* Widget Name Fixed
+* Important Links Fixed
+* Header Layer Fixed
+
 Fifteen 2.1.8
 
 *	Removed an alert bug

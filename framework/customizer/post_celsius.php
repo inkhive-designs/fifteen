@@ -53,7 +53,7 @@ function fifteen_customize_register_post_celsius( $wp_customize ) {
 
 
     $wp_customize->add_control(
-        new Hanne_WP_Customize_Category_Control(
+        new Fifteen_WP_Customize_Category_Control(
             $wp_customize,
             'fifteen_celsius_cat',
             array(

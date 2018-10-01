@@ -21,7 +21,7 @@
                                 <?php if (has_post_thumbnail()) : ?>
                                     <div title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('fifteen-thumb',array('alt' => trim(strip_tags( $post->post_title )))); ?></div>
                                 <?php else : ?>
-                                    <div title="<?php the_title_attribute() ?>"><img alt="<?php the_title() ?>" src="<?php echo esc_html(get_template_directory_uri()."/assets/images/placeholder2.jpg"); ?>"></div>
+                                    <div title="<?php the_title_attribute() ?>"><img alt="<?php the_title() ?>" src="<?php echo esc_html(get_template_directory_uri()."/assets/images/placeholder.png"); ?>"></div>
                                 <?php endif; ?>
 
                                 <p class="description">

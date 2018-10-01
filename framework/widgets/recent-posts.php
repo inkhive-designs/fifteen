@@ -10,7 +10,7 @@ class fifteen_Recent_Posts extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'fifteen_rp', // Base ID
-			__('Hanne Recent Posts with Thumbnails', 'fifteen'), // Name
+			__('Fifteen Recent Posts with Thumbnails', 'fifteen'), // Name
 			array( 'description' => __( 'Display your recent posts, with a Thumbnail.', 'fifteen' ), ) // Args
 		);
 	}

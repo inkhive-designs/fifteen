@@ -3,7 +3,7 @@
 ** Customizer Controls 
 */
 if (class_exists('WP_Customize_Control')) {
-	class Hanne_WP_Customize_Category_Control extends WP_Customize_Control {
+	class Fifteen_WP_Customize_Category_Control extends WP_Customize_Control {
         /**
          * Render the control's content.
          */
